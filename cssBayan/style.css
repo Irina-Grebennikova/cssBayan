@@ -11,7 +11,7 @@
 input {font-family: inherit;}
 input::-ms-clear {display: none;}
 img {vertical-align: top;}
-
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 600;}
 /* Обнуление стилей */
 
 html, body {
@@ -22,7 +22,6 @@ html, body {
     font-size: 100%;
     line-height: 1;
     font-size: 22px;
-    font-weight: 700;
     -ms-text-size-adjust: 100%;
     -moz-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
@@ -51,30 +50,48 @@ html, body {
 }
 
 .meme__input {
-    /* width: 0;
-    height: 0;
-    -webkit-appearance: none;
-    appearance: none;
-    position: absolute; */
     display: none;
 }
-.meme__input:checked ~ .meme__image{
+
+.meme__image img {
+    width: 0;
+    height: 0;
+    max-height: 400px;
     display: block;
+    margin: 0 auto;
+    transition: all .5s ease;
+}
+
+.meme__input:checked ~ label > .meme__image{
+    display: block;
+    padding: 15px 0;
+}
+
+.meme:hover > .meme__image{
+    display: block;
+    padding: 15px 0;
+}
+
+.meme__input:checked ~ label > .meme__image img {
+    height: 400px;
+    width: auto;
+}
+.meme:hover > .meme__image img {
+    height: 400px;
+    width: auto;
 }
 .meme__input:checked ~ .meme__title {
-    /* color: red; */
     background-color: #EC5863;
     background: #EC5863 url(images/arrow-down.png) 99% no-repeat;
 }
 
 .meme__image {
-    display: none;
-    padding: 15px 0;
+    transition: all 1s ease;
 }
-.meme__image img {
-    max-height: 400px;
-    display: block;
-    margin: 0 auto;
-}
+
+
+
+
+
 
 
