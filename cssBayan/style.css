@@ -1,0 +1,75 @@
+/* Обнуление стилей */
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+:focus, :active {outline: none;}
+input {font-family: inherit;}
+input::-ms-clear {display: none;}
+img {vertical-align: top;}
+
+/* Обнуление стилей */
+
+html, body {
+    font-family: 'Courier New', Courier, monospace;
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 20px;
+    font-weight: 700;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+.container {
+    max-width: 70%;
+    margin: 0 auto;
+}
+
+/* meme */
+
+/* .meme {
+    max-width: 500px;
+    margin: 20px auto;
+} */
+
+.meme__item {
+    border: 1px solid #b91125;
+}
+
+.meme__title {
+    display: block;
+    cursor: pointer;
+    padding: 10px 15px;
+}
+
+.meme__input {
+    /* width: 0;
+    height: 0;
+    -webkit-appearance: none;
+    appearance: none;
+    position: absolute; */
+    display: none;
+}
+.meme__input:checked ~ .meme__image{
+    display: block;
+}
+.meme__input:checked ~ .meme__title {
+    color: red;
+}
+
+.meme__image {
+    display: none;
+}
+.meme__image img {
+    max-height: 400px;
+    display: block;
+    margin: 0 auto;
+}
+
+
