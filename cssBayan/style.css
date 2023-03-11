@@ -30,20 +30,16 @@ html, body {
 /* bayan */
 
 .bayan {
-    /* max-width: 500px;
-    margin: 20px auto; */
-
     max-width: 65%;
     margin: 30px auto;
 }
 
 .bayan__item {
-    /* border: 1px solid #b91125; */
     margin-bottom: 5px;
     cursor: pointer;
 }
 
-label {
+.meme__body {
     cursor: pointer;
 }
 
@@ -66,32 +62,18 @@ label {
     transition: all .5s ease;
 }
 
-.meme__input:checked ~ label > .meme__image{
-    display: block;
+.meme__input:checked ~ .meme__body img,
+.meme__input:hover ~ .meme__body img {
+    height: 400px;
+    width: auto;
     padding: 15px 0;
 }
 
-.meme:hover .meme__image{
-    display: block;
-    padding: 15px 0;
-}
-
-.meme__input:checked ~ label > .meme__image img {
-    height: 400px;
-    width: auto;
-}
-.meme:hover .meme__image img {
-    height: 400px;
-    width: auto;
-}
-.meme__input:checked ~ label > .meme__title {
+.meme__input:checked ~ .meme__body > .meme__title {
     background-color: #EC5863;
     background: #EC5863 url(images/arrow-down.png) 99% no-repeat;
 }
 
-.meme__image {
-    transition: all 1s ease;
-}
 
 
 
