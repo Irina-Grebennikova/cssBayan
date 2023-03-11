@@ -25,6 +25,7 @@ html, body {
     -ms-text-size-adjust: 100%;
     -moz-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
+    background-color: #F5F5EB;
 }
 
 /* bayan */
@@ -36,16 +37,23 @@ html, body {
 
 .bayan__item {
     margin-bottom: 5px;
-    cursor: pointer;
 }
 
 .meme__body {
     cursor: pointer;
 }
 
+.meme__input:not(:checked):active ~ .meme__body{
+    opacity: 0.7;
+}
+
 .meme__title {
     display: block;
     padding: 10px 15px;
+    background-color: #3B8DD4;
+}
+
+.bayan:hover .meme__title {
     background: #3B8DD4 url(images/arrow-right.png) 99% no-repeat;
 }
 
@@ -69,10 +77,40 @@ html, body {
     padding: 15px 0;
 }
 
-.meme__input:checked ~ .meme__body > .meme__title {
+.meme__input:checked ~ .meme__body > .meme__title,
+.meme__input:active ~ .meme__body > .meme__title {
     background-color: #EC5863;
-    background: #EC5863 url(images/arrow-down.png) 99% no-repeat;
 }
+
+.bayan:hover .meme__input:checked ~ .meme__body > .meme__title {
+    background: #3B8DD4 url(images/arrow-down.png) 99% no-repeat;
+}
+
+/* .test {
+    display: flex;
+    width: 18p;
+    height: 18px;
+    justify-content: flex-end;
+    transform: translate(0,-30px);
+} */
+
+/* .meme__input:hover ~ .meme__body .test-img {
+    transform: rotate(90deg);
+    transition: all 1.5s ease;
+}
+
+.test-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3B8DD4;
+}
+.test-img {
+    width: 18px;
+    height: 18px;
+} */
+
+
 
 
 
