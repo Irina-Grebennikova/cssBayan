@@ -18,34 +18,36 @@ html, body {
     font-family: 'Courier New', Courier, monospace;
     height: 100%;
     width: 100%;
+    color: #fff;
     font-size: 100%;
     line-height: 1;
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 700;
     -ms-text-size-adjust: 100%;
     -moz-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
 }
-.container {
-    max-width: 70%;
-    margin: 0 auto;
+
+/* bayan */
+
+.bayan {
+    /* max-width: 500px;
+    margin: 20px auto; */
+
+    max-width: 65%;
+    margin: 30px auto;
 }
 
-/* meme */
-
-/* .meme {
-    max-width: 500px;
-    margin: 20px auto;
-} */
-
-.meme__item {
-    border: 1px solid #b91125;
+.bayan__item {
+    /* border: 1px solid #b91125; */
+    margin-bottom: 5px;
 }
 
 .meme__title {
     display: block;
     cursor: pointer;
     padding: 10px 15px;
+    background: #3B8DD4 url(images/arrow-right.png) 99% no-repeat;
 }
 
 .meme__input {
@@ -60,11 +62,14 @@ html, body {
     display: block;
 }
 .meme__input:checked ~ .meme__title {
-    color: red;
+    /* color: red; */
+    background-color: #EC5863;
+    background: #EC5863 url(images/arrow-down.png) 99% no-repeat;
 }
 
 .meme__image {
     display: none;
+    padding: 15px 0;
 }
 .meme__image img {
     max-height: 400px;
