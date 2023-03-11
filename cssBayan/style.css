@@ -40,11 +40,15 @@ html, body {
 .bayan__item {
     /* border: 1px solid #b91125; */
     margin-bottom: 5px;
+    cursor: pointer;
+}
+
+label {
+    cursor: pointer;
 }
 
 .meme__title {
     display: block;
-    cursor: pointer;
     padding: 10px 15px;
     background: #3B8DD4 url(images/arrow-right.png) 99% no-repeat;
 }
@@ -67,7 +71,7 @@ html, body {
     padding: 15px 0;
 }
 
-.meme:hover > .meme__image{
+.meme:hover .meme__image{
     display: block;
     padding: 15px 0;
 }
@@ -76,11 +80,11 @@ html, body {
     height: 400px;
     width: auto;
 }
-.meme:hover > .meme__image img {
+.meme:hover .meme__image img {
     height: 400px;
     width: auto;
 }
-.meme__input:checked ~ .meme__title {
+.meme__input:checked ~ label > .meme__title {
     background-color: #EC5863;
     background: #EC5863 url(images/arrow-down.png) 99% no-repeat;
 }
