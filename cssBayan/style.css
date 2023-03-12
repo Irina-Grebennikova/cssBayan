@@ -33,6 +33,7 @@ html, body {
 .bayan {
     max-width: 65%;
     margin: 30px auto;
+    cursor: pointer;
 }
 
 .bayan__item {
@@ -47,68 +48,60 @@ html, body {
     opacity: 0.7;
 }
 
-.meme__title {
-    display: block;
-    padding: 10px 15px;
+.meme__text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: #3B8DD4;
 }
+ /* Arrow-icon */
+.arrow {
+    margin-right: 10px;
+    transition: all 0.5s ease-in-out;
+}
 
-.bayan:hover .meme__title {
-    background: #3B8DD4 url(images/arrow-right.png) 99% no-repeat;
+.meme__input:checked ~ .meme__body .arrow {
+    transform: rotate(90deg);
+}
+
+.bayan:not(:hover) .arrow {
+    display: none;
+}
+ /* Arrow-icon */
+
+.meme__title {
+    padding: 10px 15px;
+}
+
+.meme__image img {
+    width: 0;
+    height: 0;
+    display: block;
+    margin: 0 auto;
+    transition: all .5s ease;
 }
 
 .meme__input {
     display: none;
 }
 
-.meme__image img {
-    width: 0;
-    height: 0;
-    max-height: 400px;
-    display: block;
-    margin: 0 auto;
-    transition: all .5s ease;
-}
-
-.meme__input:checked ~ .meme__body img,
-.meme__input:hover ~ .meme__body img {
+.meme__input:checked ~ .meme__body .meme__image img,
+.meme__input:hover ~ .meme__body .meme__image img{
     height: 400px;
     width: auto;
     padding: 15px 0;
 }
 
-.meme__input:checked ~ .meme__body > .meme__title,
-.meme__input:active ~ .meme__body > .meme__title {
+.meme__input:checked ~ .meme__body > .meme__text,
+.meme__input:active ~ .meme__body > .meme__text {
     background-color: #EC5863;
 }
 
-.bayan:hover .meme__input:checked ~ .meme__body > .meme__title {
-    background: #3B8DD4 url(images/arrow-down.png) 99% no-repeat;
-}
-
-/* .test {
-    display: flex;
-    width: 18p;
-    height: 18px;
-    justify-content: flex-end;
-    transform: translate(0,-30px);
-} */
-
-/* .meme__input:hover ~ .meme__body .test-img {
-    transform: rotate(90deg);
-    transition: all 1.5s ease;
-}
-
-.test-title {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.bayan:hover .meme__input:checked ~ .meme__body > .meme__text {
     background-color: #3B8DD4;
 }
-.test-img {
-    width: 18px;
-    height: 18px;
-} */
+
+
 
 
 
