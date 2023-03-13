@@ -97,6 +97,9 @@ html, body {
     .bayan:not(:hover) .arrow {
         display: none;
     }
+    .meme__input:hover ~ .meme__body .arrow {
+        transform: rotate(90deg);
+    }
     .bayan:hover .meme__input:checked ~ .meme__body > .meme__text {
         background-color: #3B8DD4;
         color: #fff;
