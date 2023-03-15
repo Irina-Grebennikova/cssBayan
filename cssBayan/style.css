@@ -66,11 +66,11 @@ html, body {
 }
 
 .meme__image img {
-    width: 0;
-    height: 0;
+    width: 0%;
+    height: 0%;
     display: block;
     margin: 0 auto;
-    transition: all .5s ease;
+    transition: all .7s ease;
 }
 
 .meme__input {
