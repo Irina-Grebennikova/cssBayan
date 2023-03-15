@@ -1,0 +1,151 @@
+/* Обнуление стилей */
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+:focus, :active {outline: none;}
+input {font-family: inherit;}
+input::-ms-clear {display: none;}
+img {vertical-align: top;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 600;}
+/* Обнуление стилей */
+
+html, body {
+    font-family: 'Courier New', Courier, monospace;
+    height: 100%;
+    width: 100%;
+    color: #fff;
+    line-height: 1;
+    background-color: #F5F5EB;
+}
+
+/* bayan */
+
+.bayan {
+    font-size: 3.5vh;
+    max-width: 65%;
+    margin: 5vh auto;
+}
+
+.bayan__item {
+    margin-bottom: 0.7vh;
+}
+
+.meme__body {
+    cursor: pointer;
+}
+
+.meme__input:not(:checked):active ~ .meme__body{
+    opacity: 0.7;
+}
+
+.meme__text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3B8DD4;
+}
+ /* Arrow-icon */
+.arrow {
+    margin-right: 1vw;
+    transition: all 0.5s ease-in-out;
+}
+
+.meme__input:checked ~ .meme__body .arrow {
+    transform: rotate(90deg);
+}
+
+ /* Arrow-icon */
+
+.meme__title {
+    padding: 1.5% 2%;
+}
+
+.meme__image img {
+    width: 0%;
+    height: 0%;
+    display: block;
+    margin: 0 auto;
+    transition: all .7s ease;
+}
+
+.meme__input {
+    display: none;
+}
+
+.meme__input:checked ~ .meme__body .meme__image img {
+    height: auto;
+    width: 30vw;
+    padding: 1.5% 0;
+}
+
+.meme__input:checked ~ .meme__body > .meme__text,
+.meme__input:active ~ .meme__body > .meme__text {
+    background-color: #EC5863;
+    color: #c9e2f9;
+}
+
+
+@media (hover: hover) {
+    .bayan {
+        cursor: pointer;
+    }
+    .bayan:not(:hover) .arrow {
+        display: none;
+    }
+    .meme__input:hover ~ .meme__body .arrow {
+        transform: rotate(90deg);
+    }
+    .bayan:hover .meme__input:checked ~ .meme__body > .meme__text {
+        background-color: #3B8DD4;
+        color: #fff;
+    }
+    .meme__input:hover ~ .meme__body .meme__image img {
+        height: auto;
+        width: 30vw;
+        padding: 1.5% 0;
+    }
+}
+@media (max-width: 820px) {
+    .bayan {
+        max-width: 90%;
+    }
+    .meme__input:checked ~ .meme__body .meme__image img {
+        width: 50vw;
+    }
+}
+@media (max-width: 650px) {
+    .arrow {
+        margin-right: 2vw;
+    }
+    .meme__input:checked ~ .meme__body .meme__image img {
+        padding: 3% 0;
+    }
+}
+@media (max-width: 320px) {
+    .meme__input:checked ~ .meme__body .meme__image img {
+        width: 100%;
+    }
+}
+@media (max-height: 500px) {
+    .bayan {
+        font-size: 3.5vw;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
